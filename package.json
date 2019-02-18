@@ -1,16 +1,30 @@
 {
   "name": "frontend-components",
   "version": "1.0.0",
-  "scripts": {
-    "dev": "webpack --watch --mode development",
-    "build": "webpack --mode production"
-  },
   "author": "",
-  "license": "ISC",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --watch --mode development"
+  },
+  "dependencies": {
+    "await-to-js": "^2.1.1",
+    "axios": "^0.18.0",
+    "dotenv-webpack": "^1.7.0",
+    "toastr": "^2.1.4",
+    "vue": "^2.6.6",
+    "vue-property-decorator": "^7.3.0",
+    "vue-template-compiler": "^2.6.6"
+  },
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@types/node": "^11.9.4",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "babel-eslint": "^10.0.1",
     "css-loader": "^2.1.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
@@ -20,13 +34,5 @@
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3"
   },
-  "dependencies": {
-    "await-to-js": "^2.1.1",
-    "axios": "^0.18.0",
-    "dotenv-webpack": "^1.7.0",
-    "vue": "^2.6.6",
-    "vue-property-decorator": "^7.3.0",
-    "vue-template-compiler": "^2.6.6",
-    "vue-toasted": "^1.1.26"
-  }
+  "license": "ISC"
 }

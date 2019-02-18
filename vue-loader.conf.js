@@ -6,4 +6,4 @@ module.exports = {
     extract: isProduction
   }),
   esModule: true
-};
+}

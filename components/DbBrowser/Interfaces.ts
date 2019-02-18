@@ -1,24 +1,24 @@
 interface DbTables {
-  headline: string;
-  tables: Array<string>;
+  headline: string
+  tables: Array<string>
 }
 
 interface TableData {
-  columns: Array<Column>;
-  indexes: Array<Index>;
-  keys: Array<string>;
+  columns: Array<Column>
+  indexes: Array<Index>
+  keys: Array<string>
 }
 
 interface Column {
-  dbtype: string;
-  name: string;
-  nullable: string;
-  type: string;
+  dbtype: string
+  name: string
+  nullable: string
+  type: string
 }
 
 interface Index {
-  description: string;
-  name: String;
+  description: string
+  name: String
 }
 
-export { DbTables, TableData, Column, Index };
+export { DbTables, TableData, Column, Index }

@@ -1,30 +1,30 @@
-const path = require("path");
-const webpack = require("webpack");
-const Dotenv = require("dotenv-webpack");
+const path = require('path')
+const webpack = require('webpack')
+const Dotenv = require('dotenv-webpack')
 module.exports = {
   entry: {
-    DbBrowser: "./components/DbBrowser/DbBrowser.ts"
+    DbBrowser: './components/DbBrowser/DbBrowser.ts'
   },
   output: {
-    filename: "./components/[name]/[name]-bundle.js",
-    path: path.resolve(__dirname, "./")
+    filename: './components/[name]/[name]-bundle.js',
+    path: path.resolve(__dirname, './')
   },
 
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: "vue-loader",
+        loader: 'vue-loader',
         options: {
           loaders: {
-            scss: "vue-style-loader!css-loader!sass-loader",
-            sass: "vue-style-loader!css-loader!sass-loader?indentedSyntax"
+            scss: 'vue-style-loader!css-loader!sass-loader',
+            sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
           }
         }
       },
       {
         test: /\.tsx?$/,
-        loader: "ts-loader",
+        loader: 'ts-loader',
         exclude: /node_modules/,
         options: {
           appendTsSuffixTo: [/\.vue$/]
@@ -32,19 +32,19 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
   resolve: {
-    extensions: [".ts", ".js", ".vue", ".json"],
+    extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
-      vue$: "vue/dist/vue.esm.js"
+      vue$: 'vue/dist/vue.esm.js'
     }
   },
   plugins: [
     new Dotenv({
-      path: path.resolve(__dirname, ".env.dev")
+      path: path.resolve(__dirname, '.env.dev')
     })
   ]
-};
+}
