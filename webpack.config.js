@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const Dotenv = require("dotenv-webpack");
 module.exports = {
   entry: {
     DbBrowser: "./components/DbBrowser/DbBrowser.ts"
@@ -40,5 +41,10 @@ module.exports = {
     alias: {
       vue$: "vue/dist/vue.esm.js"
     }
-  }
+  },
+  plugins: [
+    new Dotenv({
+      path: path.resolve(__dirname, ".env.dev")
+    })
+  ]
 };

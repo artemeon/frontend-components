@@ -21,7 +21,8 @@ class DbBrowser extends Vue {
   private async mounted(): Promise<void> {
     const [err, res]: any = await to(
       axios.post(
-        "https://dev.artemeon.de/agp/xml.php?admin=1&module=dbbrowser&action=apiListTables"
+        process.env.BASE_URL +
+          "/xml.php?admin=1&module=dbbrowser&action=apiListTables"
       )
     );
     if (err) {
@@ -35,7 +36,8 @@ class DbBrowser extends Vue {
   private async getSelectedTable(): Promise<void> {
     const [err, res] = await to(
       axios.post(
-        "https://dev.artemeon.de/agp/xml.php?admin=1&module=dbbrowser&action=apiSystemSchemaJson&table=" +
+        process.env.BASE_URL +
+          "/xml.php?admin=1&module=dbbrowser&action=apiSystemSchemaJson&table=" +
           this.selectedTable
       )
     );
@@ -55,7 +57,8 @@ class DbBrowser extends Vue {
   private async addIndex(column: string): Promise<void> {
     const [err, res]: any = await to(
       axios.post(
-        "https://dev.artemeon.de/agp/xml.php?admin=1&module=dbbrowser&action=apiAddIndex&table=" +
+        process.env.BASE_URL +
+          "/xml.php?admin=1&module=dbbrowser&action=apiAddIndex&table=" +
           this.selectedTable +
           "&column=" +
           column
@@ -73,7 +76,8 @@ class DbBrowser extends Vue {
   private async deleteIndex(index: Index): Promise<void> {
     const [err, res] = await to(
       axios.post(
-        "https://dev.artemeon.de/agp/xml.php?admin=1&module=dbbrowser&action=apiDeleteIndex&index=" +
+        process.env.BASE_URL +
+          "/xml.php?admin=1&module=dbbrowser&action=apiDeleteIndex&index=" +
           index.name +
           "&table=" +
           this.selectedTable
@@ -93,7 +97,8 @@ class DbBrowser extends Vue {
   private async recreateIndex(index: Index): Promise<void> {
     const [err, res] = await to(
       axios.post(
-        "https://dev.artemeon.de/agp/xml.php?admin=1&module=dbbrowser&action=apiRecreateIndex&index=" +
+        process.env.BASE_URL +
+          "/xml.php?admin=1&module=dbbrowser&action=apiRecreateIndex&index=" +
           index.name +
           "&table=" +
           this.selectedTable
