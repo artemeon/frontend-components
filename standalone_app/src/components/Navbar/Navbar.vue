@@ -1,7 +1,7 @@
 <template>
   <div id="navbarContainer">
     <router-link to="/dbbrowser">Datenbank Browser</router-link>
-    <router-link to="/reportconfigurator">Report Generator</router-link>
+    <router-link to="/reportconfigurator/list">Report Generator</router-link>
   </div>
 </template>
 

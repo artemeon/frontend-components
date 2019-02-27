@@ -7,15 +7,17 @@
           <td>{{report.strTitle}}</td>
           <td id="actions">
             <span>
-              <i class="fa fa-pencil" aria-hidden="true"></i>
+              <router-link :to="'/reportconfigurator/edit/'+report.strSystemid">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </router-link>
             </span>
             <span>
-              <span>
-                <i class="fa fa-folder-open-o" aria-hidden="true"></i>
-              </span>
-              <span @click="deleteReport(report.strSystemid)">
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
-              </span>
+              <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+            </span>
+            <span @click="deleteReport(report.strSystemid)">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </span>
+            <span @click="duplicateReport(report.strSystemid)">
               <i class="fa fa-files-o" aria-hidden="true"></i>
             </span>
             <span>

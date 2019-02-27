@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import App from './components/App/App.vue'
 import DbBrowser from './components/DbBrowser/DbBrowser.vue'
 import Login from './components/Login/Login.vue'
-import ReportGeneratorList from './components/ReportGeneratorList/ReportGeneratorList.vue'
+import ReportGeneratorList from './components/ReportGenerator/ReportGeneratorList/ReportGeneratorList.vue'
+import ReportGeneratorEdit from './components/ReportGenerator/ReportGeneratorEdit/ReportGeneratorEdit.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -23,8 +24,12 @@ export default new Router({
       component: DbBrowser
     },
     {
-      path: '/reportconfigurator',
+      path: '/reportconfigurator/list',
       component: ReportGeneratorList
+    },
+    {
+      path: '/reportconfigurator/edit/:id',
+      component: ReportGeneratorEdit
     }
   ]
 })
