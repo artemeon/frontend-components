@@ -8,17 +8,24 @@ class ReportGeneratorEdit extends Vue {
   @(namespace('Loader').Action) StartLoader: any
   @(namespace('Loader').Action) StopLoader: any
   private reportId!: string
+  private report: object = {}
+  private title: string = ''
+  private description: string = ''
   private async mounted (): Promise<void> {
-    // console.log(this.$route.params.id)
+    this.StartLoader()
     this.reportId = this.$route.params.id
     axios.defaults.headers.common['Authorization'] = 'Basic '.concat(
       btoa(process.env.VUE_APP_USER + ':' + process.env.VUE_APP_PASSWORD)
     )
+    await this.fetchReport()
+    this.StopLoader()
+  }
+  private async fetchReport (): Promise<void> {
     const [err, res] = await to(
       axios.get(
         process.env.VUE_APP_BASE_URL +
-          '/xml.php?admin=1&module=reportconfigurator&action=editApi&systemid=' +
-          this.$route.params.id +
+          '/xml.php?admin=1&module=reportconfigurator&action=fetchReportApi&systemid=' +
+          this.reportId +
           '&contentFill=1'
       )
     )
@@ -26,7 +33,9 @@ class ReportGeneratorEdit extends Vue {
       toastr.error('Fehler')
     }
     if (res) {
-      console.log(res)
+      this.report = res.data
+      this.title = res.data.strTitle
+      this.description = res.data.strDescription
     }
   }
 }
