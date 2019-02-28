@@ -5,6 +5,7 @@
       <tbody>
         <tr v-for="(report, index) in reportList.reports" :key="index">
           <td>{{report.strTitle}}</td>
+          <td>{{report.strTargetobject}}</td>
           <td id="actions">
             <span>
               <router-link :to="'/reportconfigurator/edit/'+report.strSystemid">

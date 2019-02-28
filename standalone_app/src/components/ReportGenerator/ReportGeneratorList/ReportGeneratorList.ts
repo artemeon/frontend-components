@@ -21,7 +21,7 @@ class ReportGeneratorList extends Vue {
     const [err, res] = await to(
       axios.get(
         process.env.VUE_APP_BASE_URL +
-          '/xml.php?admin=1&module=reportconfigurator&action=apiList'
+          '/xml.php?admin=1&module=reportconfigurator&action=listApi'
       )
     )
     if (err) {
