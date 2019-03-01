@@ -1,6 +1,12 @@
-#actions {
+.actions {
   text-align: right;
   i {
     cursor: pointer;
+  }
+}
+a {
+  text-transform: none;
+  i {
+    color: black;
   }
 }
