@@ -1,6 +1,8 @@
 <template>
   <div id="loaderContainer" v-if="loading">
-    <h3>Loading</h3>
+    <span class="loader">
+      <span class="loader-inner"></span>
+    </span>
   </div>
   <div v-else></div>
 </template>

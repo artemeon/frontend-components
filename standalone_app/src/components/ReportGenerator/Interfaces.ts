@@ -19,4 +19,10 @@ interface Report {
   strTitle: string
 }
 
-export default Report
+interface ReportList {
+  elementsPerPage: number
+  reports: Array<Report>
+  totalCount: number
+}
+
+export { Report, ReportList }

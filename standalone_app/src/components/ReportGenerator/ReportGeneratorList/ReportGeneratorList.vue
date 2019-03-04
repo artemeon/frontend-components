@@ -73,13 +73,15 @@
           <td></td>
           <td></td>
           <td class="actions">
-            <i
-              class="fa fa-plus-circle"
-              aria-hidden="true"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              title="Neuen Datensatz anlegen"
-            ></i>
+            <router-link to="/reportconfigurator/new">
+              <i
+                class="fa fa-plus-circle"
+                aria-hidden="true"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Neuen Datensatz anlegen"
+              ></i>
+            </router-link>
           </td>
         </tr>
       </tbody>

@@ -4,7 +4,7 @@ import axios from 'axios'
 import to from 'await-to-js'
 import Col from '../../Grid/Col'
 import Row from '../../Grid/Row'
-import Report from '../Interfaces'
+import { Report } from '../Interfaces'
 const toastr = require('toastr')
 @Component({ components: { Col, Row } })
 class ReportGeneratorEdit extends Vue {

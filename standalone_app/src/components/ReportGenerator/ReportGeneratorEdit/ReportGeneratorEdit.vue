@@ -47,18 +47,20 @@
           <span>Ist diese Option aktiv, so kann die Generierung des Exports erheblich länger dauern</span>
         </Col>
       </Row>
-      <Row>
-        <Col :sm="3">
-          <label for="reportconfigarator_editobjects">Datensätze über den Report editieren</label>
-        </Col>
-        <Col :sm="6">
-          <select id="reportconfigarator_editobjects" v-model="bitEditObjects">
-            <option disabled>Bitte wählen</option>
-            <option :value="0" :selected="checkIfObjectsEditable()">Nein</option>
-            <option :value="1" :selected="checkIfObjectsEditable()">Ja</option>
-          </select>
-        </Col>
-      </Row>
+      <div class="form-group">
+        <Row>
+          <Col :sm="3">
+            <label for="reportconfigarator_editobjects">Datensätze über den Report editieren</label>
+          </Col>
+          <Col :sm="6">
+            <select id="reportconfigarator_editobjects" v-model="bitEditObjects">
+              <option disabled>Bitte wählen</option>
+              <option :value="0" :selected="checkIfObjectsEditable()">Nein</option>
+              <option :value="1" :selected="checkIfObjectsEditable()">Ja</option>
+            </select>
+          </Col>
+        </Row>
+      </div>
       <Row>
         <Col :sm="3"></Col>
         <Col :sm="6">

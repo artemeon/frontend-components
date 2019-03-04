@@ -2,12 +2,13 @@ import { Vue, Component } from 'vue-property-decorator'
 import axios from 'axios'
 import to from 'await-to-js'
 import { namespace } from 'vuex-class'
+import { ReportList } from '../Interfaces'
 const toastr = require('toastr')
 @Component
 class ReportGeneratorList extends Vue {
   @(namespace('Loader').Action) StartLoader: any
   @(namespace('Loader').Action) StopLoader: any
-  private reportList: object = {}
+  private reportList: ReportList = {} as ReportList
   private async mounted (): Promise<void> {
     axios.defaults.headers.common['Authorization'] = 'Basic '.concat(
       btoa(process.env.VUE_APP_USER + ':' + process.env.VUE_APP_PASSWORD)
