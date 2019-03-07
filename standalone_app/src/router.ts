@@ -6,6 +6,7 @@ import Login from './components/Login/Login.vue'
 import ReportGeneratorList from './components/ReportGenerator/ReportGeneratorList/ReportGeneratorList.vue'
 import ReportGeneratorEdit from './components/ReportGenerator/ReportGeneratorEdit/ReportGeneratorEdit.vue'
 import ReportGeneratorNew from './components/ReportGenerator/ReportGeneratorNew/ReportGeneratorNew.vue'
+import ReportGeneratorShow from './components/ReportGenerator/ReportGeneratorShow/ReportGeneratorShow.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -35,6 +36,10 @@ export default new Router({
     {
       path: '/reportconfigurator/new',
       component: ReportGeneratorNew
+    },
+    {
+      path: '/reportconfigurator/showReport/:id',
+      component: ReportGeneratorShow
     }
   ]
 })

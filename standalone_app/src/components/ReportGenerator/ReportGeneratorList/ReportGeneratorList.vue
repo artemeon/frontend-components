@@ -22,13 +22,15 @@
               </router-link>
             </span>
             <span>
-              <i
-                class="fa fa-folder-open-o"
-                aria-hidden="true"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                title="Report Anzeigen"
-              ></i>
+              <router-link :to="'/reportconfigurator/showReport/'+report.strSystemid">
+                <i
+                  class="fa fa-folder-open-o"
+                  aria-hidden="true"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Report Anzeigen"
+                ></i>
+              </router-link>
             </span>
             <span @click="deleteReport(report.strSystemid)">
               <i
