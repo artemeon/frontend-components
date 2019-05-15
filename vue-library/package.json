@@ -1,13 +1,15 @@
 {
-  "name": "vue-library",
+  "name": "@artemeon/vue-library",
   "version": "0.1.0",
   "private": true,
+  "main": "./dist/artemeon.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "build-library": "vue-cli-service build --target lib --name artemeon ./src/components/index.ts"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -61,5 +63,12 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
+  ],
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
   ]
 }
