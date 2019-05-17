@@ -51,10 +51,10 @@ import @artemeon/vue-library
 
 ```vue
 <template>
-  <Checkbox v-bind="data - object" />
-  <Radio v-bind="data - object" />
-  < TextField v-bind="data-object"/>
-  <TextArea v-bind="data - object" />
+  <Checkbox v-bind="data_object" />
+  <Radio v-bind="data_object" />
+  <TextField v-bind="data_object" />
+  <TextArea v-bind="data_object" />
 </template>
 ```
 
