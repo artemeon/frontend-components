@@ -59,15 +59,16 @@ import @artemeon/vue-library
 ```
 
 **You can bind an object with props or you can specify the props separately**
-| Props | Definition |
-| :--------: | :---------------------------------------------: |
-| id | Unique key |
-| name | By checkboxes and radio buttons required ! |
-| value | this will be the default value of the element |
-| values | Values for select, checkboxes or radio |
-| readonly | Default false |
-| disabled | Default false |
-| Label | Label for element |
+
+|  Props   |                  Definition                   |
+| :------: | :-------------------------------------------: |
+|    id    |                  Unique key                   |
+|   name   |  By checkboxes and radio buttons required !   |
+|  value   | this will be the default value of the element |
+|  values  |    Values for select, checkboxes or radio     |
+| readonly |                 Default false                 |
+| disabled |                 Default false                 |
+|  Label   |               Label for element               |
 
 | Events |             Definition              |  Binding   |
 | :----: | :---------------------------------: | :--------: |
