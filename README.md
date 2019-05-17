@@ -1,39 +1,25 @@
 # vue-library
 
-## Project setup
+## Installation
+
 ```
-npm install
+npm i --save @artemeon/vue-library
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+## Usage
+
+### In main.js file:
+
+```javascript
+import @artemeon/vue-library
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
+```vue
+<template>
+  <component-name props />
+</template>
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Available components:
 
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Card
