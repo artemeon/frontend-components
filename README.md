@@ -114,13 +114,11 @@ import @artemeon/vue-library
 
 ```javascript
 handleChange(e){
-  /***
+  /**
    * Code here
    * /
 }
 ```
-
-**You can bind an object with props or you can specify the props separately**
 
 | Props  |                Definition                |
 | :----: | :--------------------------------------: |
@@ -128,10 +126,9 @@ handleChange(e){
 |  left  | Left option of the Switch. Type: String  |
 | right  | right option of the Switch. Type: String |
 
-| Events |                 Definition                 |         Binding         |
-| :----: | :----------------------------------------: | :---------------------: |
-| change | returns false when left option is selected | @change="function-name" |
-|        | and true when the right option is selecte  |                         |
+| Events |                                      Definition                                       |         Binding         |
+| :----: | :-----------------------------------------------------------------------------------: | :---------------------: |
+| change | returns false when left option is selected and true when the right option is selected | @change="function-name" |
 
 ### Button
 
@@ -148,7 +145,7 @@ handleChange(e){
 
 ```javascript
 handleClick(){
-  /***
+  /**
    * Code here
    * /
 }
