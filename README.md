@@ -73,3 +73,91 @@ import @artemeon/vue-library
 | Events |             Definition              |  Binding   |
 | :----: | :---------------------------------: | :--------: |
 | input  | value will be automatically updated | no binding |
+
+### Table
+
+#### Usage
+
+```vue
+<template>
+  <Table>
+    <TableHead>
+      <TableCell></TableCell>
+    </TableHead>
+    <TableBody>
+      <TableRow>
+        <TableCell></TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+</template>
+```
+
+| Props  |         Definition          |
+| :----: | :-------------------------: |
+| styles | Object, adds inline styling |
+
+### ASwitch
+
+#### Usage
+
+```vue
+<template>
+  <ASwitch
+    styles="stylesObject"
+    left="left option"
+    right="right option"
+    @change="handleChange"
+  />
+</template>
+```
+
+```javascript
+handleChange(e){
+  /***
+   * Code here
+   * /
+}
+```
+
+**You can bind an object with props or you can specify the props separately**
+
+| Props  |                Definition                |
+| :----: | :--------------------------------------: |
+| styles |    Styles Object, adds inline styling    |
+|  left  | Left option of the Switch. Type: String  |
+| right  | right option of the Switch. Type: String |
+
+| Events |                 Definition                 |         Binding         |
+| :----: | :----------------------------------------: | :---------------------: |
+| change | returns false when left option is selected | @change="function-name" |
+|        | and true when the right option is selecte  |                         |
+
+### Button
+
+#### Usage
+
+```vue
+<template>
+  <Button styles="stylesObject" @click="handleClick">
+    <i></i>
+    Click Me
+  </Button>
+</template>
+```
+
+```javascript
+handleClick(){
+  /***
+   * Code here
+   * /
+}
+```
+
+| Props  |             Definition             |
+| :----: | :--------------------------------: |
+| styles | Styles Object, adds inline styling |
+
+| Events |         Definition          |         Binding         |
+| :----: | :-------------------------: | :---------------------: |
+| click  | Normal button click handler | @click ="function-name" |
