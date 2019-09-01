@@ -9,6 +9,7 @@ class FormMixin extends Vue {
   @Prop({ type: Boolean, default: false }) readonly!: boolean
   @Prop({ type: Boolean, default: false }) disabled!: boolean
   @Prop({ type: Boolean, default: false }) mandatory!: boolean
+  @Prop() placeholder!: any
   @Prop() value!: any
   @Prop() values!: any
   formHandler () {}
