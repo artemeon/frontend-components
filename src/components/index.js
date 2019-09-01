@@ -27,7 +27,17 @@ const Components = {
   TableHead,
   TableRow
 }
+// https://forum.vuejs.org/t/dynamically-import-components/33715
+// const ComponentLibrary = {
+//   install(Vue, options = {}) {
+//     // components
+//     for (const componentName in components) {
+//       const component = components[componentName]
 
+//       Vue.component(component.name, component)
+//     }
+//   }
+// }
 Object.keys(Components).forEach(name => {
   Vue.component(name, Components[name])
 })
