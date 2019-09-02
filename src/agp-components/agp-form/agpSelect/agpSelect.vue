@@ -5,7 +5,7 @@
       <select
         :name="name"
         :id="name"
-        :class="['form-control',icon_values ? 'selectpicker' : '', cssClass]"
+        :class="['form-control',iconValues ? 'selectpicker' : '', cssClass]"
         :disabled="readonly"
         v-model="selected"
       >

@@ -3,7 +3,7 @@ import FormMixin from '@/agp-components/Mixins/FormMixins'
 
 @Component
 class agpSelect extends Mixins(FormMixin) {
-  @Prop() icon_values!: any
+  @Prop() iconValues!: any
   selected = ''
 
   @Watch('selected')

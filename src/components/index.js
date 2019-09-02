@@ -12,6 +12,18 @@ import TableBody from './Table/TableBody/TableBody.vue'
 import TableCell from './Table/TableCell/TableCell.vue'
 import TableHead from './Table/TableHead/TableHead.vue'
 import TableRow from './Table/TableRow/TableRow.vue'
+// agp table components
+import agpTable from '../agp-components/agp-table/agpTable/agpTable.vue'
+import agpTc from '../agp-components/agp-table/agpTc/agpTc.vue'
+import agpTr from '../agp-components/agp-table/agpTr/agpTr.vue'
+import agpThead from '../agp-components/agp-table/agpThead/agpThead.vue'
+// agp form elements
+import agpCheckbox from '../agp-components/agp-form/agpCheckbox/agpCheckbox.vue'
+import agpInput from '../agp-components/agp-form/agpInput/agpInput.vue'
+import agpRadio from '../agp-components/agp-form/agpRadio/agpRadio.vue'
+import agpSelect from '../agp-components/agp-form/agpSelect/agpSelect.vue'
+import agpTextarea from '../agp-components/agp-form/agpTextarea/agpTextarea.vue'
+
 const Components = {
   Card,
   Checkbox,
@@ -25,7 +37,16 @@ const Components = {
   TableBody,
   TableCell,
   TableHead,
-  TableRow
+  TableRow,
+  agpTable,
+  agpTc,
+  agpTr,
+  agpThead,
+  agpCheckbox,
+  agpInput,
+  agpRadio,
+  agpSelect,
+  agpTextarea
 }
 // https://forum.vuejs.org/t/dynamically-import-components/33715
 // const ComponentLibrary = {
