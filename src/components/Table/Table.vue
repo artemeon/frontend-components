@@ -1,5 +1,5 @@
 <template>
-  <table :style="tableStyle" class="table">
+  <table :style="tableStyle" class="table artemeon-table">
     <slot></slot>
   </table>
 </template>
@@ -7,4 +7,4 @@
 </script>
 <style lang="scss" src="./Table.scss">
 </style>
-  
+
