@@ -5774,8 +5774,8 @@ function (_Mixins) {
 
   _createClass(agpInput, [{
     key: "onChange",
-    value: function onChange(val) {
-      this.$emit('input', val);
+    value: function onChange(value) {
+      this.$emit('change', value);
     }
   }]);
 
